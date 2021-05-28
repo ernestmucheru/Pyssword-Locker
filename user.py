@@ -20,4 +20,4 @@ class User:
         '''
         Saves a new user object to our user_list
         '''
-
+        User.user_list.append(self)
