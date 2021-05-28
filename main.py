@@ -33,7 +33,7 @@ def main():
 
 
             while entered_username != created_user_name or entered_password != created_user_password:
-                print("Invalid login credentials\n")
+                print("Invalid login credentials. Try again.\n")
                 print("Username")
                 entered_username = input()
                 print("Password")
@@ -41,5 +41,27 @@ def main():
             
             else:
                 print(f"Welcome {entered_username} to your Siri account\n")
+
+    elif short_code == '2':
+        print("Welcome back Siri Member")
+        print("Enter your username")
+        default_user_name = input()
+
+        print("Enter password")
+        default_user_password = input()
+        print("\n")
+
+        while default_user_name != created_user_name or default_user_password != created_user_password:
+            print("Invalid login credentials. Try again. \n")
+
+            print("Enter your username")
+            default_user_name = input()
+
+            print("Enter password")
+            default_user_password = input()
+            print("\n")
+        
+        else:
+            print("Login Successful \n\n")
 
     
