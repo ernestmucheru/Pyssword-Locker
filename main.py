@@ -64,4 +64,7 @@ def main():
         else:
             print("Login Successful \n\n")
 
-    
+    elif short_code == '0':
+        break
+    else:
+        print("Enter valid code to continue")
