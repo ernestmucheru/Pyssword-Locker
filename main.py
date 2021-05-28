@@ -15,3 +15,10 @@ def main():
 
         print("Confirm Password")
         confirm_password = input()
+
+    while confirm_password != created_new_password:
+        print("Passwords DO NOT match")
+        print("Recreate your Password")
+        created_user_password = input()
+        print("Confirm Password")
+        confirm_password = input()
