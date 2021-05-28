@@ -15,4 +15,9 @@ class User:
         user_name: The user's username.
         password: The user's login pass to the locker.
     '''
-    
+
+    def save_user (self):
+        '''
+        Saves a new user object to our user_list
+        '''
+
