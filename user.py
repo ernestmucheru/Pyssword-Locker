@@ -80,4 +80,11 @@ class Credential:
                     user_credentials_list.append(credential)
             return user_credentials_list
 
-        
+        @classmethod
+        def find_site_by_name(cls,site_name):
+            '''
+            Class method to find saved credentials by searching for a specific site name
+            '''
+            for credential in cls.credentials_list:
+                if credential.site_name == site_name:
+                    return credential     
