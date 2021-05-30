@@ -34,17 +34,17 @@ class Credential:
         credentials_list = []
         user_credentials_list = []
 
-        # @classmethod
-        # def confirm_user (cls,user_name,password):
-        #         '''
-        #         checks that the name and password match the one on the list
-        #         '''
-        #         current_user = ''
-        #         for user in User.user_list:
-        #             if (User.user_name == user_name and User.password ==password)
-        #                     current_user = user.user_name 
-        #         return current_user
-        
+        @classmethod
+        def confirm_user(cls,user_name,password):
+                 '''
+                 checks that the name and password match the one on the list
+                 '''
+                 confirm_user = ''
+                 for user in User.users_list:
+                     if (user.user_name == user_name and user.password == password):
+                                current_user = user.user_name
+                 return confirm_user 
+                
         def __init__(self, user_name,site_name,account_name,password):
                 '''
                 Method to define the properties for each user object will hold
@@ -61,3 +61,10 @@ class Credential:
                 '''
                 #global_user_list
                 Credential.credentials_list.append(self)
+        
+        def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+                '''
+                Function to generate an 8 character password for a credential
+                '''
+                random_pass=''.join(random.choice(char) for _ in range(size))
+                return random_pass
