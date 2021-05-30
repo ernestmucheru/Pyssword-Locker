@@ -1,3 +1,5 @@
+import pyperclip
+
 class User:
     '''
     This is a class that will generate a new instance of the user
@@ -21,3 +23,18 @@ class User:
         Saves a new user object to our user_list
         '''
         User.user_list.append(self)
+
+class Credential:
+        '''
+        Class to create account credentials, generate password and save account Credentials
+        '''
+
+        credential_list = []
+        user_credential_list = []
+
+        @classmethod
+        def confirm_user (cls, user_name, password):
+            '''
+            checks that the name and password match the one on the list
+            '''
+        
