@@ -33,14 +33,24 @@ class Credential:
         credentials_list = []
         user_credentials_list = []
 
-        @classmethod
-        def confirm_user (cls,user_name,password):
-                '''
-                checks that the name and password match the one on the list
-                '''
-                current_user = ''
-                for user in User.user_list:
-                    if (User.user_name == user_name and User.password ==password)
-                            current_user = user.user_name 
-                return current_user
+        # @classmethod
+        # def confirm_user (cls,user_name,password):
+        #         '''
+        #         checks that the name and password match the one on the list
+        #         '''
+        #         current_user = ''
+        #         for user in User.user_list:
+        #             if (User.user_name == user_name and User.password ==password)
+        #                     current_user = user.user_name 
+        #         return current_user
         
+        def __init__(self, user_name,site_name,account_name,password):
+                '''
+                Method to define the properties for each user object will hold
+                '''
+
+                #instance variables
+                self.user_name = user_name
+                self.site_name = site_name
+                self.account_name = account_name
+                self.password = password
