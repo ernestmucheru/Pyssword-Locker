@@ -1,4 +1,5 @@
 import pyperclip
+import string
 
 class User:
     '''
@@ -28,13 +29,18 @@ class Credential:
         '''
         Class to create account credentials, generate password and save account Credentials
         '''
-
-        credential_list = []
-        user_credential_list = []
+        #Class Varibales
+        credentials_list = []
+        user_credentials_list = []
 
         @classmethod
-        def confirm_user (cls, user_name, password):
-            '''
-            checks that the name and password match the one on the list
-            '''
+        def confirm_user (cls,user_name,password):
+                '''
+                checks that the name and password match the one on the list
+                '''
+                current_user = ''
+                for user in User.user_list:
+                    if (User.user_name == user_name and User.password ==password)
+                            current_user = user.user_name 
+                return current_user
         
