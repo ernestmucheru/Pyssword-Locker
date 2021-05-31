@@ -9,6 +9,14 @@ def create_user(user_name,password):
 	new_user = User(user_name,password)
 	return new_user
 
+def save_user(user):
+	'''
+	Function to save a new user account
+	'''
+	User.save_user(user)
+
+
+
 def main():
     
     #landing page
