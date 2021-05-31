@@ -22,6 +22,13 @@ def verify_user(first_name,password):
 	confirm_user = Credential.check_user(first_name,password)
 	return confirm_user
 
+def generate_password():
+	'''
+	Function to generate a password automatically
+	'''
+	random_pass = Credential.generate_password()
+	return random_pass
+
 
 
 def main():
