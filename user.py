@@ -1,4 +1,4 @@
-import pyperclip
+# import pyperclip
 import string
 import random
 
@@ -94,4 +94,4 @@ class Credential:
                 Class method that copies a credential's info after the credential's site name is entered
                 '''
                 find_credential = Credential.find_site_by_name(site_name)
-                return pyperclip.copy(find_credential.password)     
+                return Credential.copy(find_credential.password)     
